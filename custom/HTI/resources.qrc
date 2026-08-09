@@ -1,0 +1,16 @@
+<RCC>
+    <qresource prefix="/qml/HTI">
+        <file alias="HTITestPanel.qml">qml/HTITestPanel.qml</file>
+    </qresource>
+    <qresource prefix="/Custom/qml">
+        <file alias="QGroundControl/MainWindow.qml">qml/QGroundControl/MainWindow.qml</file>
+        <file alias="QGroundControl/FlyView/FlyViewCustomLayer.qml">qml/FlyViewCustomLayer.qml</file>
+        <file alias="QGroundControl/FlyView/HTILeftToolBar.qml">qml/HTILeftToolBar.qml</file>
+        <file alias="QGroundControl/FlyView/HTILeftToolButton.qml">qml/HTILeftToolButton.qml</file>
+        <file alias="QGroundControl/FlyView/HTIConnectionDialog.qml">qml/HTIConnectionDialog.qml</file>
+        <file alias="QGroundControl/Controls/AppSettings.qml">qml/QGroundControl/Controls/AppSettings.qml</file>
+    </qresource>
+    <qresource prefix="/HTI">
+        <!-- Reserved for HTI logos, icons, splash screens and vehicle assets. -->
+    </qresource>
+</RCC>
