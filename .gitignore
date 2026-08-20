@@ -178,6 +178,7 @@ Qt*-linux*.tar.*
 .pytest_cache/
 .import_linter_cache/
 .venv/
+.venv-copied-from-old-pc-20260812/
 
 # Vale prose linter (downloaded via `vale sync`)
 .github/styles/

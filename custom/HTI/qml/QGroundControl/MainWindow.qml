@@ -339,6 +339,26 @@ ApplicationWindow {
         visible:        false
     }
 
+    QGCButton {
+        id: backToFlyButton
+
+        anchors.top: parent.top
+        anchors.right: parent.right
+        anchors.topMargin: ScreenTools.defaultFontPixelHeight * 0.35
+        anchors.rightMargin: ScreenTools.defaultFontPixelWidth * 1.5
+        text: qsTr("Back to Fly")
+        iconSource: "/qmlimages/PaperPlane.svg"
+        primary: true
+        visible: planView.visible && !toolDrawer.visible
+        z: QGroundControl.zOrderTopMost
+
+        onClicked: {
+            if (mainWindow.allowViewSwitch()) {
+                mainWindow.showFlyView()
+            }
+        }
+    }
+
     footer: LogReplayStatusBar {
         visible: QGroundControl.settingsManager.flyViewSettings.showLogReplayStatusBar.rawValue
     }

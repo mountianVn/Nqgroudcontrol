@@ -25,7 +25,7 @@ const QVariantList &CustomPlugin::analyzePages()
     if (!_analyzePagesInitialized) {
         _analyzePages = QGCCorePlugin::analyzePages();
         _analyzePages.append(QVariant::fromValue(new QmlComponentInfo(
-            QStringLiteral("HTI Test Panel"),
+            QStringLiteral("NGroundControl Test Panel"),
             QUrl::fromUserInput(QStringLiteral("qrc:/qml/HTI/HTITestPanel.qml")),
             QUrl(),
             this)));

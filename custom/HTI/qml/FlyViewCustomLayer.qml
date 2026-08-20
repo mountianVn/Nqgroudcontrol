@@ -2,6 +2,9 @@ import QtQuick
 
 import QGroundControl
 import QGroundControl.Controls
+import QGroundControl.FlyView
+import QGroundControl.FlightMap
+import "qrc:/qml/HTI"
 
 Item {
     id: root
@@ -9,6 +12,9 @@ Item {
     property var parentToolInsets
     property var totalToolInsets: _toolInsets
     property var mapControl
+    readonly property var _activeVehicle: QGroundControl.multiVehicleManager
+        ? QGroundControl.multiVehicleManager.activeVehicle
+        : null
 
     signal connectClicked()
     signal mapsClicked()
@@ -20,6 +26,25 @@ Item {
     QGCPopupDialogFactory {
         id: connectionDialogFactory
         dialogComponent: HTIConnectionDialog {}
+    }
+
+    // Nút chụp ảnh/quay video: x = 3.8%, y = 27.5% theo kích thước Fly View.
+    // Dùng component camera gốc của QGC, chỉ thay đổi vị trí hiển thị.
+    Loader {
+        id: photoVideoControlLoader
+
+        x: parent.width * 0.035
+        y: parent.height * 0.0001
+        sourceComponent: root._activeVehicle && root._activeVehicle.cameraManager
+            ? photoVideoControlComponent
+            : undefined
+        z: QGroundControl.zOrderTopMost
+    }
+
+    Component {
+        id: photoVideoControlComponent
+
+        PhotoVideoControl {}
     }
 
     QGCToolInsets {
@@ -39,6 +64,7 @@ Item {
         bottomEdgeRightInset: root.parentToolInsets.bottomEdgeRightInset
     }
 
+    // === LEFT TOOLBAR ===
     HTILeftToolBar {
         id: leftToolBar
 
@@ -72,5 +98,43 @@ Item {
             root.settingsClicked()
             mainWindow.showSettingsTool()
         }
+    }
+
+    // === BOTTOM-RIGHT TELEMETRY HUD ===
+    HTIBottomRightHud {
+        id: telemetryHud
+
+        anchors.right: parent.right
+        anchors.bottom: parent.bottom
+        // Cộng thêm 16 px để cụm gauge không chạm mép phải màn hình.
+        anchors.rightMargin: Math.max(12, Math.min(20, ScreenTools.defaultFontPixelWidth * 2)) + 16
+        anchors.bottomMargin: Math.max(12, Math.min(20, ScreenTools.defaultFontPixelWidth * 2))
+
+        z: QGroundControl.zOrderTopMost
+    }
+
+    // Right-side controls stay in the overlay layer and reserve the bottom HUD area.
+    HTIRightControlPanel {
+        id: rightControlPanel
+
+        anchors.right: parent.right
+        anchors.top: parent.top
+        anchors.rightMargin: Math.max(8, ScreenTools.defaultFontPixelWidth)
+        anchors.topMargin: Math.max(8, ScreenTools.defaultFontPixelHeight * 0.35)
+        height: Math.min(rightControlPanel.implicitHeight,
+                         Math.max(0, parent.height - anchors.topMargin - telemetryHud.height - ScreenTools.defaultFontPixelHeight * 1.5))
+
+        z: QGroundControl.zOrderTopMost - 1
+    }
+
+    // Hiển thị trực tiếp toàn bộ action từ JSON đã chọn, không cần mở menu Actions.
+    HTIMavlinkActionsPanel {
+        id: mavlinkActionsPanel
+
+        anchors.top: rightControlPanel.top
+        anchors.right: rightControlPanel.left
+        anchors.rightMargin: Math.max(8, ScreenTools.defaultFontPixelWidth)
+        activeVehicle: root._activeVehicle
+        z: QGroundControl.zOrderTopMost - 1
     }
 }

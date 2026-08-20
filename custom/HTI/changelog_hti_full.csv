@@ -16,7 +16,13 @@ Date,Time,File,Component,Change_Type,Description,Status
 2026-08-09,17:30,lich_su_thay_doi.csv,Root,New,Add Vietnamese changelog - initial change tracking file,Done
 2026-08-09,17:30,changelog_settings_dialog.csv,Root,New,Add English changelog - structured change log for settings dialog,Done
 2026-08-09,17:30,images/.gitkeep,Root,New,Add images placeholder - for HTI branding assets,Done
-2026-08-09,17:30,AppSettings.qml,Root,Layout,Dialog responsive: 80% parent, min 900x650, max 80%x80% - replaces fixed 900x650,Done
+2026-08-09,18:45,AppSettings.qml,Layout,Restructure: ColumnLayout (header) + RowLayout (sidebar|content) - full-width header,FillWidth content
+2026-08-09,18:45,AppSettings.qml,Header,Move Settings title + Close button to full-width header bar (not sidebar header),Done
+2026-08-09,18:45,AppSettings.qml,Header,Close button positioned right-aligned in header (corner position),Done
+2026-08-09,18:45,AppSettings.qml,Sidebar,Change _sidebarWidth from responsive (32%) to fixed 260px,Done
+2026-08-09,18:45,AppSettings.qml,Content,Layout.fillWidth: true - content fills remaining space after sidebar,Done
+2026-08-09,18:45,AppSettings.qml,Content,ScrollView fills content container properly with margins,Done
+2026-08-09,18:45,AppSettings.qml,All,Remove khoảng trống lớn bên phải - content mở rộng tối đa,Done
 2026-08-09,17:30,MainWindow.qml,toolDrawerToolbar,Layout,Set height=0, visible=false - header moved to AppSettings.qml,Done
 2026-08-09,17:30,MainWindow.qml,toolDrawerLoader,Layout,Anchors: fill parent (not top: toolbar.bottom) - proper full coverage,Done
 2026-08-09,17:30,AppSettings.qml,Root,Layout,Switch from Rectangle+anchors to Item+RowLayout - full responsive,Done

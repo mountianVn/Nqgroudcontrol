@@ -11,7 +11,7 @@ Rectangle {
 
     QGCLabel {
         anchors.centerIn: parent
-        text: qsTr("HTI Custom QGroundControl")
+        text: qsTr("NGroundControl Custom Panel")
         color: qgcPal.text
     }
 }

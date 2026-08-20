@@ -10,7 +10,8 @@ ToolStripAction {
     id:         action
     text:       qsTr("Actions")
     iconSource: "qrc:/qmlimages/HamburgerThin.svg"
-    visible:    _additionalActions.anyActionAvailable || _mavlinkActions.anyActionAvailable || _customActions.anyActionAvailable
+    // HTI hien thi cac action JSON trong panel co dinh, vi vay an menu trung lap nay.
+    visible:    false
     enabled:    true
 
     property var _guidedController: globals.guidedControllerFlyView
