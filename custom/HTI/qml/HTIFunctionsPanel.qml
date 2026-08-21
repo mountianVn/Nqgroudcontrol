@@ -10,6 +10,7 @@ Item {
     property var activeVehicle: QGroundControl.multiVehicleManager.activeVehicle
     property bool showPreFlightStatus: false
     property string actionMessage: ""
+    property string _mavlinkLogHistory: ""
 
     // 0.25 là khoảng đệm dưới cùng; tăng nếu nội dung sát đáy panel.
     implicitHeight: contentColumn.y + contentColumn.implicitHeight + ScreenTools.defaultFontPixelHeight * 0.25
@@ -20,6 +21,20 @@ Item {
 
     readonly property var _battery: activeVehicle && activeVehicle.batteries && activeVehicle.batteries.count > 0 ? activeVehicle.batteries.get(0) : null
     readonly property real _batteryPercent: _factValue(_battery ? _battery.percentRemaining : null, 0)
+
+    function _syncMavlinkLogHistory() {
+        root._mavlinkLogHistory = root.activeVehicle ? String(root.activeVehicle.formattedMessages || "") : ""
+    }
+
+    onActiveVehicleChanged: root._syncMavlinkLogHistory()
+
+    Connections {
+        target: root.activeVehicle
+
+        function onNewFormattedMessage(formattedMessage) {
+            root._mavlinkLogHistory = String(formattedMessage || "") + root._mavlinkLogHistory
+        }
+    }
 
     function _factValue(fact, fallback) {
         if (!fact || typeof fact.rawValue === "undefined") {
@@ -119,7 +134,7 @@ Item {
             return qsTr("No Messages")
         }
         if (root.activeVehicle.prearmError && root.activeVehicle.prearmError !== "") {
-            return root.activeVehicle.prearmError
+            return root._translateMavlinkText(root.activeVehicle.prearmError)
         }
         if (!root.activeVehicle.allSensorsHealthy) {
             return qsTr("Sensor health warning")
@@ -127,8 +142,43 @@ Item {
         return qsTr("No Messages")
     }
 
+    // MAVLink STATUS_TEXT is firmware-generated, so translate recognized templates
+    // while preserving dynamic sensor ids, channel ranges, and sampling values.
+    function _translateMavlinkText(text) {
+        let translated = String(text || "")
+        translated = translated.replace(/PreArm: Battery (\d+) below minimum arming voltage/g,
+            function(match, battery) { return qsTr("PreArm: Battery %1 below minimum arming voltage").arg(battery) })
+        translated = translated.replace(/PreArm: Compass (\d+) not healthy/g,
+            function(match, compass) { return qsTr("PreArm: Compass %1 not healthy").arg(compass) })
+        translated = translated.replace(/PreArm: Gyros inconsistent/g, qsTr("PreArm: Gyros inconsistent"))
+        translated = translated.replace(/PreArm: RC not found/g, qsTr("PreArm: RC not found"))
+        translated = translated.replace(/EKF(\d+) IMU(\d+) tilt alignment complete/g,
+            function(match, ekf, imu) { return qsTr("EKF%1 IMU%2 tilt alignment complete").arg(ekf).arg(imu) })
+        translated = translated.replace(/AHRS: EKF(\d+) active/g,
+            function(match, ekf) { return qsTr("AHRS: EKF%1 active").arg(ekf) })
+        translated = translated.replace(/EKF(\d+) IMU(\d+) initialised/g,
+            function(match, ekf, imu) { return qsTr("EKF%1 IMU%2 initialised").arg(ekf).arg(imu) })
+        translated = translated.replace(/RCOut: PWM:(\d+)-(\d+)/g,
+            function(match, first, last) { return qsTr("RCOut: PWM:%1-%2").arg(first).arg(last) })
+        translated = translated.replace(/AHRS: DCM active/g, qsTr("AHRS: DCM active"))
+        translated = translated.replace(/ArduPilot Ready/g, qsTr("ArduPilot Ready"))
+        translated = translated.replace(/Initialising ArduPilot/g, qsTr("Initialising ArduPilot"))
+        translated = translated.replace(/Frame: ([^<\r\n]+)/g,
+            function(match, frame) { return qsTr("Frame: %1").arg(frame) })
+        translated = translated.replace(/IMU(\d+): normal sampling ([^<\r\n]+)/g,
+            function(match, imu, rate) { return qsTr("IMU%1: normal sampling %2").arg(imu).arg(rate) })
+        translated = translated.replace(/IMU(\d+): fast sampling ([^<\r\n]+)/g,
+            function(match, imu, rate) { return qsTr("IMU%1: fast sampling %2").arg(imu).arg(rate) })
+        translated = translated.replace(/RCOut: Initialising/g, qsTr("RCOut: Initialising"))
+        translated = translated.replace(/Barometer (\d+) calibration complete/g,
+            function(match, barometer) { return qsTr("Barometer %1 calibration complete").arg(barometer) })
+        translated = translated.replace(/Calibrating barometer/g, qsTr("Calibrating barometer"))
+        return translated
+    }
+
     function _formatLogMessage(message) {
-        let formatted = String(message || "")
+        let formatted = root._translateMavlinkText(message)
+
         formatted = formatted.replace(new RegExp("<#E>", "g"), "color: #FF5A52; font: 10pt monospace;")
         formatted = formatted.replace(new RegExp("<#I>", "g"), "color: #F4D35E; font: 10pt monospace;")
         formatted = formatted.replace(new RegExp("<#N>", "g"), "color: #EAF6FF; font: 10pt monospace;")
@@ -136,11 +186,13 @@ Item {
     }
 
     function _allMessagesText() {
-        if (root.activeVehicle && root.activeVehicle.formattedMessages) {
-            return root._formatLogMessage(root.activeVehicle.formattedMessages)
+        if (root._mavlinkLogHistory !== "") {
+            return root._formatLogMessage(root._mavlinkLogHistory)
         }
         return root._messageText()
     }
+
+    Component.onCompleted: root._syncMavlinkLogHistory()
 
     Popup {
         id: logPopup

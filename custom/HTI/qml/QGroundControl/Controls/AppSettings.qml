@@ -213,7 +213,7 @@ Item {
                         }
 
                         Label {
-                            text:                   "Close"
+                            text:                   qsTr("Close")
                             color:                  "white"
                             font.pointSize:         12
                             font.bold:              true
