@@ -275,6 +275,21 @@ Item {
                             width:      parent.width
                             spacing:    0
 
+                            SettingsButton {
+                                Layout.fillWidth: true
+                                Layout.preferredHeight: 40
+                                text: qsTr("Voice")
+                                icon.source: "/InstrumentValueIcons/conversation.svg"
+                                checked: rightPanel.source.toString().indexOf("HTIVoiceSettings.qml") !== -1
+                                onClicked: {
+                                    if (mainWindow.allowViewSwitch()) {
+                                        _selectedPageIndex = -1
+                                        _selectedSectionIndex = -1
+                                        rightPanel.source = "qrc:/qml/HTI/HTIVoiceSettings.qml"
+                                    }
+                                }
+                            }
+
                             Repeater {
                                 id:     buttonRepeater
                                 model:  settingsPagesModel

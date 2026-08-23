@@ -1,0 +1,5 @@
+﻿"NgonNgu","Nhom","TenFileWav","CauDoc","BatBuoc","GhiChu"
+"Tieng Viet","Cau mo dau","vi_khoang_cach_den_home.wav","Khoảng cách đến điểm Home","Có","Dùng trước giá trị khoảng cách từ máy bay đến Home"
+"Tieng Viet","Cau mo dau","vi_tong_quang_duong_da_bay.wav","Tổng quãng đường đã bay","Có","Dùng trước giá trị flightDistance tích lũy"
+"English","Opening phrase","en_distance_to_home.wav","Distance to Home","Có","Used before the aircraft-to-Home distance"
+"English","Opening phrase","en_total_distance_traveled.wav","Total distance traveled","Có","Used before cumulative flight distance"

@@ -1,0 +1,69 @@
+﻿NgonNgu,Nhom,TenFileWav,CauDoc,BatBuoc,GhiChu
+Tieng Viet,Cau mo dau,vi_khoang_cach_hien_tai.wav,Khoảng cách hiện tại,Có,Dùng cho thông báo quãng đường bay
+Tieng Viet,Cau mo dau,vi_do_cao_hien_tai.wav,Độ cao hiện tại,Có,Dùng cho thông báo độ cao
+Tieng Viet,Cau mo dau,vi_pin_hien_tai.wav,Pin hiện tại,Có,Dùng cho thông báo phần trăm pin
+Tieng Viet,Don vi,vi_kilomet.wav,ki lô mét,Có,Dùng sau giá trị khoảng cách hoặc độ cao
+Tieng Viet,Don vi,vi_phan_tram.wav,phần trăm,Có,Dùng sau giá trị pin
+Tieng Viet,So thap phan,vi_phay.wav,phẩy,Có,Dùng cho số thập phân một chữ số
+Tieng Viet,So,vi_so_khong.wav,không,Có,0
+Tieng Viet,So,vi_so_mot.wav,một,Có,1
+Tieng Viet,So,vi_so_hai.wav,hai,Có,2
+Tieng Viet,So,vi_so_ba.wav,ba,Có,3
+Tieng Viet,So,vi_so_bon.wav,bốn,Có,4
+Tieng Viet,So,vi_so_nam.wav,năm,Có,5
+Tieng Viet,So,vi_so_sau.wav,sáu,Có,6
+Tieng Viet,So,vi_so_bay.wav,bảy,Có,7
+Tieng Viet,So,vi_so_tam.wav,tám,Có,8
+Tieng Viet,So,vi_so_chin.wav,chín,Có,9
+Tieng Viet,So,vi_muoi.wav,mười,Có,10 đến 19
+Tieng Viet,So,vi_hai_muoi.wav,hai mươi,Có,20 đến 29
+Tieng Viet,So,vi_ba_muoi.wav,ba mươi,Có,30 đến 39
+Tieng Viet,So,vi_bon_muoi.wav,bốn mươi,Có,40 đến 49
+Tieng Viet,So,vi_nam_muoi.wav,năm mươi,Có,50 đến 59
+Tieng Viet,So,vi_sau_muoi.wav,sáu mươi,Có,60 đến 69
+Tieng Viet,So,vi_bay_muoi.wav,bảy mươi,Có,70 đến 79
+Tieng Viet,So,vi_tam_muoi.wav,tám mươi,Có,80 đến 89
+Tieng Viet,So,vi_chin_muoi.wav,chín mươi,Có,90 đến 99
+Tieng Viet,So,vi_tram.wav,trăm,Có,Hàng trăm
+Tieng Viet,So,vi_nghin.wav,nghìn,Có,Hàng nghìn
+Tieng Viet,So dac biet,vi_le.wav,lẻ,Có,Đọc số hàng chục bằng không
+Tieng Viet,So dac biet,vi_mot_sau_muoi.wav,mốt,Có,Đọc 21 31 41 và tương tự
+Tieng Viet,So dac biet,vi_lam.wav,lăm,Có,Đọc số 5 sau hàng chục
+English,Opening phrase,en_current_distance.wav,Current distance,Có,Distance announcement
+English,Opening phrase,en_current_altitude.wav,Current altitude,Có,Altitude announcement
+English,Opening phrase,en_current_battery.wav,Current battery level,Có,Battery percentage announcement
+English,Unit,en_kilometer.wav,kilometer,Có,Use when value equals exactly one
+English,Unit,en_kilometers.wav,kilometers,Có,Use for other distance values
+English,Unit,en_percent.wav,percent,Có,Battery unit
+English,Decimal,en_point.wav,point,Có,Decimal separator
+English,Number,en_zero.wav,zero,Có,0
+English,Number,en_one.wav,one,Có,1
+English,Number,en_two.wav,two,Có,2
+English,Number,en_three.wav,three,Có,3
+English,Number,en_four.wav,four,Có,4
+English,Number,en_five.wav,five,Có,5
+English,Number,en_six.wav,six,Có,6
+English,Number,en_seven.wav,seven,Có,7
+English,Number,en_eight.wav,eight,Có,8
+English,Number,en_nine.wav,nine,Có,9
+English,Number,en_ten.wav,ten,Có,10
+English,Number,en_eleven.wav,eleven,Có,11
+English,Number,en_twelve.wav,twelve,Có,12
+English,Number,en_thirteen.wav,thirteen,Có,13
+English,Number,en_fourteen.wav,fourteen,Có,14
+English,Number,en_fifteen.wav,fifteen,Có,15
+English,Number,en_sixteen.wav,sixteen,Có,16
+English,Number,en_seventeen.wav,seventeen,Có,17
+English,Number,en_eighteen.wav,eighteen,Có,18
+English,Number,en_nineteen.wav,nineteen,Có,19
+English,Number,en_twenty.wav,twenty,Có,20 đến 29
+English,Number,en_thirty.wav,thirty,Có,30 đến 39
+English,Number,en_forty.wav,forty,Có,40 đến 49
+English,Number,en_fifty.wav,fifty,Có,50 đến 59
+English,Number,en_sixty.wav,sixty,Có,60 đến 69
+English,Number,en_seventy.wav,seventy,Có,70 đến 79
+English,Number,en_eighty.wav,eighty,Có,80 đến 89
+English,Number,en_ninety.wav,ninety,Có,90 đến 99
+English,Number,en_hundred.wav,hundred,Có,Hundreds
+English,Number,en_thousand.wav,thousand,Có,Thousands
+English,Connector,en_and.wav,and,Không,Tùy chọn theo phong cách đọc tiếng Anh

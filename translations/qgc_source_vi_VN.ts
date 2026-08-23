@@ -3954,6 +3954,11 @@ Vui lòng đặt phương tiện của bạn xuống nước, nhấp vào nút v
       <translation>Đóng</translation>
     </message>
     <message>
+      <location line="+65" />
+      <source>Voice</source>
+      <translation>Giọng nói</translation>
+    </message>
+    <message>
       <location filename="../src/Settings/AppSettings.cc" line="+94" />
       <source>Save to SD card specified for application data. But SD card is write protected. Using internal storage.</source>
       <translation>Lưu vào thẻ SD được chỉ định cho dữ liệu ứng dụng. Nhưng thẻ SD được bảo vệ ghi. Sử dụng bộ nhớ trong.</translation>
@@ -3975,7 +3980,7 @@ Vui lòng đặt phương tiện của bạn xuống nước, nhấp vào nút v
     </message>
     <message>
       <location filename="../src/QmlControls/AppSettings.qml" line="+165" />
-      <location filename="../custom/HTI/qml/QGroundControl/Controls/AppSettings.qml" line="+39" />
+      <location filename="../custom/HTI/qml/QGroundControl/Controls/AppSettings.qml" line="-26" />
       <source>Search settings...</source>
       <translation>Cài đặt tìm kiếm...</translation>
     </message>
@@ -4408,12 +4413,12 @@ Vui lòng đặt phương tiện của bạn xuống nước, nhấp vào nút v
   <context>
     <name>AudioOutput</name>
     <message>
-      <location filename="../src/Utilities/Audio/AudioOutput.cc" line="+226" />
+      <location filename="../src/Utilities/Audio/AudioOutput.cc" line="+230" />
       <source>%1</source>
       <translation>%1</translation>
     </message>
     <message>
-      <location line="+38" />
+      <location line="+51" />
       <source>Audio test. Volume is %1 percent</source>
       <translation>Kiểm tra âm thanh. Khối lượng là %1 phần trăm</translation>
     </message>
@@ -9231,15 +9236,15 @@ VTOL</translation>
   <context>
     <name>HTIFunctionsPanel</name>
     <message>
-      <location filename="../custom/HTI/qml/HTIFunctionsPanel.qml" line="+90" />
-      <location line="+450" />
+      <location filename="../custom/HTI/qml/HTIFunctionsPanel.qml" line="+105" />
+      <location line="+452" />
       <location line="+1" />
       <location line="+1" />
       <source>N/A</source>
       <translation>không áp dụng</translation>
     </message>
     <message>
-      <location line="-447" />
+      <location line="-449" />
       <source>0 km/h</source>
       <translation>0 km/giờ</translation>
     </message>
@@ -9272,12 +9277,12 @@ VTOL</translation>
     </message>
     <message>
       <location line="-2" />
-      <location line="+357" />
+      <location line="+359" />
       <source>Sensor health warning</source>
       <translation>Cảnh báo trạng thái cảm biến</translation>
     </message>
     <message>
-      <location line="-347" />
+      <location line="-349" />
       <source>PreArm: Battery %1 below minimum arming voltage</source>
       <translation>PreArm: Pin %1 thấp hơn điện áp ARM tối thiểu</translation>
     </message>
@@ -9362,7 +9367,7 @@ VTOL</translation>
       <translation>Đang hiệu chuẩn khí áp kế</translation>
     </message>
     <message>
-      <location line="+55" />
+      <location line="+57" />
       <source>Vehicle Messages</source>
       <translation>Tin nhắn phương tiện</translation>
     </message>
@@ -9671,6 +9676,104 @@ VTOL</translation>
       <location filename="../custom/HTI/qml/HTITestPanel.qml" line="+14" />
       <source>NGroundControl Custom Panel</source>
       <translation>Bảng tùy chỉnh NgroundControl</translation>
+    </message>
+  </context>
+  <context>
+    <name>HTIVoiceManager</name>
+    <message>
+      <location filename="../custom/HTI/Voice/HTIVoiceManager.cc" line="+54" />
+      <source>Vietnamese WAV alerts are disabled while English UI is selected</source>
+      <translation>Thông báo WAV tiếng Việt đã tắt khi giao diện English được chọn</translation>
+    </message>
+    <message>
+      <location line="+2" />
+      <source>HTI Vietnamese WAV audio pack ready</source>
+      <translation>Gói âm thanh WAV tiếng Việt HTI đã sẵn sàng</translation>
+    </message>
+    <message>
+      <location line="-23" />
+      <location line="+23" />
+      <source>HTI Vietnamese WAV audio pack unavailable</source>
+      <translation>Không thể sử dụng gói âm thanh WAV tiếng Việt HTI</translation>
+    </message>
+    <message>
+      <location filename="../custom/HTI/Voice/HTIVoiceManager.h" line="+36" />
+      <source>HTI Vietnamese WAV Voice Pack</source>
+      <translation>Gói giọng nói WAV tiếng Việt HTI</translation>
+    </message>
+  </context>
+  <context>
+    <name>HTIVoiceSettings</name>
+    <message>
+      <location filename="../custom/HTI/qml/HTIVoiceSettings.qml" line="+17" />
+      <location line="+23" />
+      <source>Voice</source>
+      <translation>Giọng nói</translation>
+    </message>
+    <message>
+      <location line="-19" />
+      <source>Voice Alerts</source>
+      <translation>Thông báo giọng nói</translation>
+    </message>
+    <message>
+      <location line="+11" />
+      <source>Language</source>
+      <translation>Ngôn ngữ</translation>
+    </message>
+    <message>
+      <location line="+3" />
+      <source>Tiếng Việt</source>
+      <translation>Tiếng Việt</translation>
+    </message>
+    <message>
+      <location line="+12" />
+      <source>Volume</source>
+      <translation>Âm lượng</translation>
+    </message>
+    <message>
+      <location line="+9" />
+      <source>Speech Rate: Recorded WAV</source>
+      <translation>Tốc độ đọc: Theo file WAV đã ghi</translation>
+    </message>
+    <message>
+      <location line="+2" />
+      <source>Alert Groups</source>
+      <translation>Nhóm cảnh báo</translation>
+    </message>
+    <message>
+      <location line="+6" />
+      <source>Connection Alerts</source>
+      <translation>Cảnh báo kết nối</translation>
+    </message>
+    <message>
+      <location line="+2" />
+      <source>Flight Mode Alerts</source>
+      <translation>Cảnh báo chế độ bay</translation>
+    </message>
+    <message>
+      <location line="+2" />
+      <source>Battery Alerts</source>
+      <translation>Cảnh báo pin</translation>
+    </message>
+    <message>
+      <location line="+2" />
+      <source>GPS Alerts</source>
+      <translation>Cảnh báo GPS</translation>
+    </message>
+    <message>
+      <location line="+2" />
+      <source>Pre-Flight Alerts</source>
+      <translation>Cảnh báo trước chuyến bay</translation>
+    </message>
+    <message>
+      <location line="+2" />
+      <source>Mission Alerts</source>
+      <translation>Cảnh báo nhiệm vụ</translation>
+    </message>
+    <message>
+      <location line="+5" />
+      <source>Test Voice</source>
+      <translation>Kiểm tra giọng nói</translation>
     </message>
   </context>
   <context>

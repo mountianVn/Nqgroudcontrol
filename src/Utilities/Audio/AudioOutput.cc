@@ -204,6 +204,10 @@ void AudioOutput::_setVolume()
 
 void AudioOutput::say(const QString &text, TextMods textMods)
 {
+    if (_speechSuppressed) {
+        return;
+    }
+
     if (!_initialized) {
         if (!QGC::runningUnitTests()) {
             qCWarning(AudioOutputLog) << "AudioOutput not initialized. Call init() before using say().";
@@ -248,6 +252,19 @@ void AudioOutput::say(const QString &text, TextMods textMods)
         _textQueueSize++;
         qCDebug(AudioOutputLog) << "Enqueued text with index:" << index << ", Queue Size:" << _textQueueSize;
     });
+}
+
+void AudioOutput::setSpeechSuppressed(bool suppressed)
+{
+    if (_speechSuppressed == suppressed) {
+        return;
+    }
+
+    _speechSuppressed = suppressed;
+    if (_speechSuppressed) {
+        _engine->stop(QTextToSpeech::BoundaryHint::Immediate);
+        _textQueueSize = 0;
+    }
 }
 
 void AudioOutput::testAudioOutput()

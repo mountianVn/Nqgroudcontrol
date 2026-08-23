@@ -1,0 +1,65 @@
+﻿Nhom,Event,TenFileWav,CauDoc,UuTien,CooldownGiay,TrangThai
+Ket noi,vehicle_connected,da_ket_noi_may_bay.wav,Đã kết nối máy bay.,INFO,7,Đã tích hợp TTS
+Ket noi,vehicle_disconnected,mat_ket_noi_may_bay.wav,Mất kết nối máy bay.,WARNING,7,Đã tích hợp TTS
+Ket noi,telemetry_lost,mat_du_lieu_telemetry.wav,"Cảnh báo, mất dữ liệu telemetry.",WARNING,10,Đề xuất WAV
+Ket noi,telemetry_restored,da_khoi_phuc_telemetry.wav,Đã khôi phục dữ liệu telemetry.,INFO,10,Đề xuất WAV
+Ket noi,link_weak,tin_hieu_ket_noi_yeu.wav,"Cảnh báo, tín hiệu kết nối yếu.",WARNING,15,Đề xuất WAV
+Ket noi,link_recovered,tin_hieu_ket_noi_da_on_dinh.wav,Tín hiệu kết nối đã ổn định.,INFO,15,Đề xuất WAV
+Trang thai bay,armed,may_bay_da_arm.wav,Máy bay đã ARM.,INFO,7,Đã tích hợp TTS
+Trang thai bay,disarmed,may_bay_da_disarm.wav,Máy bay đã DISARM.,INFO,7,Đã tích hợp TTS
+Trang thai bay,takeoff_started,may_bay_dang_cat_canh.wav,Máy bay đang cất cánh.,INFO,10,Đề xuất WAV
+Trang thai bay,takeoff_complete,may_bay_da_dat_do_cao_cat_canh.wav,Máy bay đã đạt độ cao cất cánh.,INFO,10,Đề xuất WAV
+Trang thai bay,landing_started,may_bay_dang_ha_canh.wav,Máy bay đang hạ cánh.,WARNING,10,Đề xuất WAV
+Trang thai bay,landing_complete,may_bay_da_ha_canh.wav,Máy bay đã hạ cánh.,INFO,10,Đề xuất WAV
+Trang thai bay,emergency_land,ha_canh_khan_cap.wav,"Cảnh báo, máy bay đang hạ cánh khẩn cấp.",CRITICAL,5,Đề xuất WAV
+Trang thai bay,rtl,dang_ve_home.wav,Máy bay đang trở về điểm Home.,WARNING,7,Đã tích hợp TTS
+Trang thai bay,home_reached,may_bay_da_ve_home.wav,Máy bay đã về điểm Home.,INFO,10,Đề xuất WAV
+Trang thai bay,loiter,da_chuyen_loiter.wav,Đã chuyển sang chế độ Loiter.,INFO,7,Đã tích hợp TTS
+Trang thai bay,auto,da_chuyen_auto.wav,Đã chuyển sang chế độ Auto.,INFO,7,Đã tích hợp TTS
+Trang thai bay,guided,da_chuyen_guided.wav,Đã chuyển sang chế độ Guided.,INFO,7,Đề xuất WAV
+Trang thai bay,manual,da_chuyen_manual.wav,Đã chuyển sang chế độ Manual.,INFO,7,Đề xuất WAV
+Trang thai bay,stabilize,da_chuyen_stabilize.wav,Đã chuyển sang chế độ Stabilize.,INFO,7,Đề xuất WAV
+Trang thai bay,altitude_hold,da_chuyen_giu_do_cao.wav,Đã chuyển sang chế độ giữ độ cao.,INFO,7,Đề xuất WAV
+Trang thai bay,position_hold,da_chuyen_giu_vi_tri.wav,Đã chuyển sang chế độ giữ vị trí.,INFO,7,Đề xuất WAV
+Trang thai bay,mode_change_failed,khong_the_chuyen_che_do_bay.wav,"Cảnh báo, không thể chuyển chế độ bay.",WARNING,10,Đề xuất WAV
+Nhiem vu,mission_started,nhiem_vu_da_bat_dau.wav,Nhiệm vụ đã bắt đầu.,INFO,7,Đề xuất WAV
+Nhiem vu,mission_paused,nhiem_vu_da_tam_dung.wav,Nhiệm vụ đã tạm dừng.,INFO,7,Đề xuất WAV
+Nhiem vu,mission_resumed,nhiem_vu_da_tiep_tuc.wav,Nhiệm vụ đã tiếp tục.,INFO,7,Đề xuất WAV
+Nhiem vu,mission_complete,nhiem_vu_da_hoan_thanh.wav,Nhiệm vụ đã hoàn thành.,INFO,7,Đã tích hợp TTS
+Nhiem vu,mission_aborted,nhiem_vu_da_huy.wav,"Cảnh báo, nhiệm vụ đã bị hủy.",WARNING,7,Đề xuất WAV
+Nhiem vu,waypoint_reached,da_den_waypoint.wav,Đã đến Waypoint.,INFO,5,Đề xuất WAV
+Nhiem vu,mission_upload_success,tai_len_nhiem_vu_thanh_cong.wav,Đã tải nhiệm vụ lên máy bay.,INFO,7,Đề xuất WAV
+Nhiem vu,mission_upload_failed,tai_len_nhiem_vu_that_bai.wav,"Cảnh báo, tải nhiệm vụ lên máy bay thất bại.",WARNING,7,Đề xuất WAV
+GPS RTK,gps_ready,gps_da_san_sang.wav,GPS đã sẵn sàng.,INFO,7,Đã tích hợp TTS
+GPS RTK,gps_degraded,canh_bao_gps_yeu.wav,"Cảnh báo, tín hiệu GPS yếu.",WARNING,7,Đã tích hợp TTS
+GPS RTK,gps_acquiring,dang_tim_tin_hieu_gps.wav,Đang tìm tín hiệu GPS.,INFO,15,Đề xuất WAV
+GPS RTK,gps_lost,mat_tin_hieu_gps.wav,"Cảnh báo, mất tín hiệu GPS.",WARNING,10,Đề xuất WAV
+GPS RTK,rtk_float,rtk_float.wav,RTK đang ở chế độ Float.,INFO,15,Đề xuất WAV
+GPS RTK,rtk_fixed,rtk_fixed.wav,RTK Fixed đã sẵn sàng.,INFO,15,Đề xuất WAV
+GPS RTK,gps_jamming,canh_bao_gps_bi_nhieu.wav,"Cảnh báo, tín hiệu GPS bị nhiễu.",WARNING,15,Đề xuất WAV
+GPS RTK,gps_spoofing,canh_bao_gps_gia_mao.wav,"Cảnh báo, phát hiện tín hiệu GPS giả mạo.",CRITICAL,15,Đề xuất WAV
+Pin,battery_low,canh_bao_pin_yeu.wav,"Cảnh báo, pin yếu.",WARNING,7,Đã tích hợp TTS
+Pin,battery_critical,canh_bao_pin_sap_het.wav,"Cảnh báo nguy hiểm, pin sắp hết.",CRITICAL,2.5,Đã tích hợp TTS
+Pin,battery_30,pin_con_ba_muoi_phan_tram.wav,Pin còn ba mươi phần trăm.,INFO,60,Đề xuất WAV
+Pin,battery_20,pin_con_hai_muoi_phan_tram.wav,"Cảnh báo, pin còn hai mươi phần trăm.",WARNING,60,Đề xuất WAV
+Pin,battery_10,pin_con_muoi_phan_tram.wav,"Cảnh báo nguy hiểm, pin còn mười phần trăm.",CRITICAL,60,Đề xuất WAV
+Pin,battery_missing,khong_nhan_duoc_pin.wav,"Cảnh báo, không nhận được dữ liệu pin.",WARNING,30,Đề xuất WAV
+Pin,battery_error,loi_pin.wav,"Cảnh báo, phát hiện lỗi pin.",CRITICAL,30,Đề xuất WAV
+PreArm,prearm_waiting_rc,prearm_cho_tin_hieu_dieu_khien.wav,"Chưa thể ARM, đang chờ tín hiệu điều khiển.",CRITICAL,2.5,Đã tích hợp TTS
+PreArm,prearm_low_voltage,prearm_dien_ap_pin_thap.wav,"Không thể ARM, điện áp pin quá thấp.",CRITICAL,2.5,Đã tích hợp TTS
+PreArm,prearm_compass,prearm_la_ban_chua_san_sang.wav,"Chưa thể ARM, la bàn chưa sẵn sàng.",CRITICAL,2.5,Đã tích hợp TTS
+PreArm,prearm_gyro,prearm_gyro_khong_on_dinh.wav,"Chưa thể ARM, dữ liệu con quay hồi chuyển không ổn định.",CRITICAL,2.5,Đã tích hợp TTS
+PreArm,prearm_gps,prearm_gps_chua_san_sang.wav,"Chưa thể ARM, GPS chưa sẵn sàng.",CRITICAL,2.5,Đề xuất WAV
+PreArm,prearm_ekf,prearm_ekf_khong_on_dinh.wav,"Chưa thể ARM, bộ lọc EKF chưa ổn định.",CRITICAL,2.5,Đề xuất WAV
+PreArm,prearm_accelerometer,prearm_gia_toc_ke.wav,"Chưa thể ARM, gia tốc kế chưa được hiệu chuẩn.",CRITICAL,2.5,Đề xuất WAV
+PreArm,prearm_generic,prearm_kiem_tra_khong_dat.wav,"Chưa thể ARM, kiểm tra trước chuyến bay không đạt.",CRITICAL,2.5,Đã tích hợp TTS
+An toan,failsafe_triggered,failsafe_da_kich_hoat.wav,"Cảnh báo nguy hiểm, Failsafe đã kích hoạt.",CRITICAL,5,Đề xuất WAV
+An toan,geofence_breach,vi_pham_hang_rao_dia_ly.wav,"Cảnh báo, máy bay đã vi phạm hàng rào địa lý.",CRITICAL,10,Đề xuất WAV
+An toan,obstacle_detected,phat_hien_vat_can.wav,"Cảnh báo, phát hiện vật cản.",WARNING,10,Đề xuất WAV
+An toan,ekf_error,loi_ekf.wav,"Cảnh báo, lỗi EKF.",CRITICAL,10,Đề xuất WAV
+An toan,compass_calibration_required,can_hieu_chuan_la_ban.wav,"Cảnh báo, cần hiệu chuẩn la bàn.",WARNING,30,Đề xuất WAV
+He thong,home_set,da_dat_diem_home.wav,Đã đặt điểm Home.,INFO,10,Đề xuất WAV
+He thong,recording_started,da_bat_dau_ghi_hinh.wav,Đã bắt đầu ghi hình.,INFO,10,Đề xuất WAV
+He thong,recording_stopped,da_dung_ghi_hinh.wav,Đã dừng ghi hình.,INFO,10,Đề xuất WAV
+He thong,camera_photo,da_chup_anh.wav,Đã chụp ảnh.,INFO,5,Đề xuất WAV
+He thong,voice_ready,hti_voice_ready.wav,Hệ thống thông báo giọng nói HTI đã sẵn sàng.,INFO,,Đã tích hợp TTS

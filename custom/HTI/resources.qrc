@@ -21,6 +21,7 @@
         <file alias="HTILeftToolBar.qml">qml/HTILeftToolBar.qml</file>
         <file alias="HTILeftToolButton.qml">qml/HTILeftToolButton.qml</file>
         <file alias="HTIConnectionDialog.qml">qml/HTIConnectionDialog.qml</file>
+        <file alias="HTIVoiceSettings.qml">qml/HTIVoiceSettings.qml</file>
         <file alias="Speed_Alt_440x220.png">../../resources/Speed_Alt_440x220.png</file>
     </qresource>
 

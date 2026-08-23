@@ -1,0 +1,19 @@
+﻿Event,TenFileWav,CauDoc,UuTien,CooldownGiay
+Kết nối phương tiện,da_ket_noi_may_bay.wav,Đã kết nối máy bay.,INFO,7
+Mất kết nối phương tiện,mat_ket_noi_may_bay.wav,Mất kết nối máy bay.,WARNING,7
+ARM,may_bay_da_arm.wav,Máy bay đã ARM.,INFO,7
+DISARM,may_bay_da_disarm.wav,Máy bay đã DISARM.,INFO,7
+GPS sẵn sàng,gps_da_san_sang.wav,GPS đã sẵn sàng.,INFO,7
+GPS yếu hoặc mất lock,canh_bao_gps_yeu.wav,"Cảnh báo, tín hiệu GPS yếu.",WARNING,7
+Pin yếu,canh_bao_pin_yeu.wav,"Cảnh báo, pin yếu.",WARNING,7
+Pin nguy hiểm,canh_bao_pin_sap_het.wav,"Cảnh báo nguy hiểm, pin sắp hết.",CRITICAL,2.5
+RTL,dang_ve_home.wav,Máy bay đang trở về điểm Home.,WARNING,7
+Loiter,da_chuyen_loiter.wav,Đã chuyển sang chế độ Loiter.,INFO,7
+Auto,da_chuyen_auto.wav,Đã chuyển sang chế độ Auto.,INFO,7
+Hoàn thành nhiệm vụ,nhiem_vu_da_hoan_thanh.wav,Nhiệm vụ đã hoàn thành.,INFO,7
+PreArm chờ RC,prearm_cho_tin_hieu_dieu_khien.wav,"Chưa thể ARM, đang chờ tín hiệu điều khiển.",CRITICAL,2.5
+PreArm điện áp pin thấp,prearm_dien_ap_pin_thap.wav,"Không thể ARM, điện áp pin quá thấp.",CRITICAL,2.5
+PreArm la bàn,prearm_la_ban_chua_san_sang.wav,"Chưa thể ARM, la bàn chưa sẵn sàng.",CRITICAL,2.5
+PreArm gyro,prearm_gyro_khong_on_dinh.wav,"Chưa thể ARM, dữ liệu con quay hồi chuyển không ổn định.",CRITICAL,2.5
+PreArm khác,prearm_kiem_tra_khong_dat.wav,"Chưa thể ARM, kiểm tra trước chuyến bay không đạt.",CRITICAL,2.5
+Kiểm tra giọng nói,hti_voice_ready.wav,Hệ thống thông báo giọng nói HTI đã sẵn sàng.,INFO,

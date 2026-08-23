@@ -44,6 +44,10 @@ public:
     ///     @param textMods The text modifications to apply.
     void say(const QString &text, TextMods textMods = TextMod::None);
 
+    /// Temporarily blocks core text-to-speech and clears any queued utterances.
+    /// Custom builds use this while an alternative localized voice system is active.
+    void setSpeechSuppressed(bool suppressed);
+
     /// Tests the audio output. Will stop current output before test
     void testAudioOutput();
 
@@ -52,6 +56,7 @@ private:
     qsizetype _textQueueSize = 0;
     bool _initialized = false;
     bool _speakCapable = false;
+    bool _speechSuppressed = false;
     Fact *_volumeFact = nullptr;
     Fact *_mutedFact = nullptr;
     double _lastVolume = -1.0;
