@@ -15,7 +15,8 @@
 **QGroundControl** (QGC) is a Ground Control Station (GCS) for UAVs, providing full flight control
 and mission planning for any *MAVLink-enabled* drone, including *PX4* and *ArduPilot* platforms.
 
-![Uploading image.png…]()
+<img width="1918" height="1032" alt="image" src="https://github.com/user-attachments/assets/2687ad92-7eee-4b42-b05b-21a9dad4b708" />
+
 
 
 ## Star history
