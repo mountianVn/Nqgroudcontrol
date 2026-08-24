@@ -9659,7 +9659,7 @@ VTOL</translation>
     <message>
       <location line="+42" />
       <source>km / h</source>
-      <translation>km / giờ</translation>
+      <translation>km/h</translation>
     </message>
   </context>
   <context>
@@ -9667,7 +9667,7 @@ VTOL</translation>
     <message>
       <location filename="../custom/HTI/qml/HTISpeedGauge.qml" line="+45" />
       <source>KM / h</source>
-      <translation>KM / giờ</translation>
+      <translation>KM/h</translation>
     </message>
   </context>
   <context>

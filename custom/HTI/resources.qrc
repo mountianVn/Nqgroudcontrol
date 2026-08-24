@@ -31,10 +31,12 @@
         <file alias="QGroundControl/FlyView/FlyViewCustomLayer.qml">qml/FlyViewCustomLayer.qml</file>
         <file alias="QGroundControl/FlyView/FlyViewBottomRightRowLayout.qml">qml/QGroundControl/FlyView/FlyViewBottomRightRowLayout.qml</file>
         <file alias="QGroundControl/FlyView/FlyViewTopRightColumnLayout.qml">qml/QGroundControl/FlyView/FlyViewTopRightColumnLayout.qml</file>
+        <file alias="QGroundControl/FlightMap/MapItems/VehicleMapItem.qml">qml/QGroundControl/FlightMap/MapItems/VehicleMapItem.qml</file>
         <file alias="QGroundControl/Controls/AppSettings.qml">qml/QGroundControl/Controls/AppSettings.qml</file>
     </qresource>
 
     <!-- Reserved for HTI logos, icons, splash screens and vehicle assets. -->
     <qresource prefix="/HTI">
+        <file alias="images/aircraft_marker.png">images/aircraft_marker.png</file>
     </qresource>
 </RCC>
