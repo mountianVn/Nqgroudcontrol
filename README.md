@@ -18,10 +18,6 @@ and mission planning for any *MAVLink-enabled* drone, including *PX4* and *ArduP
 <img width="1918" height="1032" alt="image" src="https://github.com/user-attachments/assets/2687ad92-7eee-4b42-b05b-21a9dad4b708" />
 
 
-
-## Star history
-
-[![Star History Chart](https://api.star-history.com/svg?repos=mavlink/qgroundcontrol&type=Date)](https://star-history.com/#mavlink/qgroundcontrol&Date)
 # Bảng Mô Tả Chức Năng Cải Tiến
 
 | STT | Chức năng | Mô tả cải tiến | Giá trị sử dụng | Thành phần chính |
